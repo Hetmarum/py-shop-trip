@@ -20,7 +20,7 @@ def shop_trip(file_name: str = "app/config.json") -> None:
             if cost == float("inf"):
                 continue
             print(f"{customer.name}'s trip to the "
-                  f"{shop.name} costs {cost: .2f}")
+                  f"{shop.name} costs {cost:.2f}")
             shop_costs.append((cost, shop))
 
         if not shop_costs:
@@ -29,7 +29,7 @@ def shop_trip(file_name: str = "app/config.json") -> None:
                 "to make a purchase in any shop")
             continue
 
-        shop_costs.sort(key=lambda x : x[0])
+        shop_costs.sort(key=lambda x: x[0])
         cheapest_cost, cheapest_shop = shop_costs[0]
 
         if cheapest_cost > customer.money:

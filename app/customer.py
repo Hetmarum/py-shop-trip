@@ -49,4 +49,4 @@ class Customer:
         self.money -= total_cost
         self.go_to_home()
         print(f"{self.name} rides home")
-        print(f"{self.name} now has {self.money: .2f} dollars\n")
+        print(f"{self.name} now has {self.money:.2f} dollars\n")
