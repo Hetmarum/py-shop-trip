@@ -15,8 +15,11 @@ class Customer:
         self.name = name
         self.location = tuple(location)
         self.money = money
-        self.car = Car(**car)
         self.product_cart = product_cart
+        if isinstance(car, dict):
+            self.car = Car(**car)
+        else:
+            self.car = car
 
     def distance_to(self, shop_location: tuple) -> float:
         return dist(self.location, shop_location)
